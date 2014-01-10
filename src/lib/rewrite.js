@@ -6,6 +6,7 @@ module.exports = function( url ) {
         page = false;
 
     if( !fs.existsSync('rewrite.json') ) {
+
         console.log('ERROR: file not exists => rewrite.json'.red );
 
         console.log('{'.red );
@@ -14,7 +15,8 @@ module.exports = function( url ) {
         console.log('    }'.red );
         console.log('}'.red );
 
-        process.exit(1);
+        process.exit(1); // Exit
+
     }
 
     var json = JSON.parse( fs.readFileSync('rewrite.json') );
