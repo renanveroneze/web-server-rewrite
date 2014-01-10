@@ -7,6 +7,13 @@ module.exports = function( url ) {
 
     if( !fs.existsSync('rewrite.json') ) {
         console.log('ERROR: file not exists => rewrite.json'.red );
+
+        console.log('{'.red );
+        console.log('    "pages": {'.red );
+        console.log('        "/": "index.html"'.red );
+        console.log('    }'.red );
+        console.log('}'.red );
+
         process.exit(1);
     }
 
