@@ -55,7 +55,7 @@ function start() {
     console.log('| | /| / / _ \\/ __ \\     \\__ \\/ _ \\/ ___/ | / / _ \\/ ___/'.green );
     console.log('| |/ |/ /  __/ /_/ /    ___/ /  __/ /   | |/ /  __/ /'.green );
     console.log('|__/|__/\\___/_.___/____/____/\\___/_/    |___/\\___/_/'.green );
-    console.log('                 /_____/ v.0.1.3 by Renan Veroneze'.green );
+    console.log('                 /_____/ v.0.1.4 by Renan Veroneze'.green );
     console.log('\n=> Listen http://localhost:'.blue + port );
 
 };

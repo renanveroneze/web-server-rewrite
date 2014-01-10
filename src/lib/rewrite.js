@@ -23,6 +23,16 @@ module.exports = function( url ) {
 
     Object.keys( json.pages ).forEach(function( key ) {
 
+        if( key != '/') {
+
+            console.log(regexp.test( url ) + ' <=> ' + url);
+            if( regexp.test( url ) ) {
+                page = json.pages[key];
+            }
+
+
+        }
+
         if( key == url ) {
             page = json.pages[key];
 

@@ -1,5 +1,6 @@
 {
     "pages": {
-        "/": "index.html"
+        "/": "index.html",
+       "/produtos/(.*)": "index.html"
     }
 }
