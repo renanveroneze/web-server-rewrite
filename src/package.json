@@ -1,0 +1,13 @@
+{
+    "author": "Renan Veroneze",
+    "name": "web-server-rewrite",
+    "description": "Simple http server with rewrite options",
+    "version": "0.0.8",
+    "main": "./lib/server.js",
+    "bin": {
+        "web-server": "./bin/web-server"
+    },
+    "engines": {
+        "node": "*"
+    }
+}
