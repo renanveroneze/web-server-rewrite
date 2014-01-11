@@ -2,7 +2,7 @@
     "author": "Renan Veroneze",
     "name": "web-server-rewrite",
     "description": "Simple http server with rewrite options",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "keywords": ["http", "server", "rewrite", "mod_rewrite", "url"],
     "readme": "# Web Server Rewrite\n\n ### Install\n ```bash\nnpm install -g web-server-rewrite```\n\n ### Usage example:\n In first step, create a file called `rewrite.json` where is folder root.\n**rewrite.json**\n```js\n\n{\n    \"pages\": {\n        \"/\": \"index.html\"\n    }\n}```\n\n After create the `json` file, start server with command:\n ```web-server [port](optional)```\n\n",
     "readmeFilename": "README.md",

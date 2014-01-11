@@ -1,6 +1,6 @@
 // server.js
 
-function start() {
+function init() {
 
     //
     // Requires Node API
@@ -55,12 +55,12 @@ function start() {
     console.log('| | /| / / _ \\/ __ \\     \\__ \\/ _ \\/ ___/ | / / _ \\/ ___/'.green );
     console.log('| |/ |/ /  __/ /_/ /    ___/ /  __/ /   | |/ /  __/ /'.green );
     console.log('|__/|__/\\___/_.___/____/____/\\___/_/    |___/\\___/_/'.green );
-    console.log('                 /_____/ v.0.1.4 by Renan Veroneze'.green );
-    console.log('\n=> Listen http://localhost:'.blue + port );
+    console.log('                 /_____/ v.0.1.5 by Renan Veroneze'.green );
+    console.log('\n=> Listen http://localhost:'.blue + '\x1B[34m\x1B[1m\x1B[4m\x1B[5m' + port + '\x1B[39m\x1B[0m' );
 
 };
 
-exports.start = start;
+exports.init = init;
 
 
 
