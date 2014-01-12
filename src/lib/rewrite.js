@@ -1,11 +1,11 @@
 // rewrite.js
 
-module.exports = function( url ) {
+module.exports = function( url, base ) {
 
     var fs = require('fs'),
         page = false;
 
-    if( !fs.existsSync('rewrite.json') ) {
+    if( !fs.existsSync( base + 'rewrite.json') ) {
 
         console.log('ERROR: file not exists => rewrite.json'.red );
 
@@ -19,7 +19,7 @@ module.exports = function( url ) {
 
     }
 
-    var json = JSON.parse( fs.readFileSync('rewrite.json') );
+    var json = JSON.parse( fs.readFileSync( base + 'rewrite.json') );
 
     Object.keys( json.pages ).forEach(function( key ) {
 

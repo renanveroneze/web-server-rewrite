@@ -1,6 +1,6 @@
 // request_process.js
 
-module.exports = function( req ) {
+module.exports = function( req, base ) {
 
     var path = require('path'),
         fs = require('fs'),
@@ -9,17 +9,17 @@ module.exports = function( req ) {
         ext = path.extname( req );
 
 
-    if( !ext ) { req = rewrite( req ); }
+    if( !ext ) { req = rewrite( req, base ); }
 
     if(req !== false) {
         req = req.charAt(0) == '/' ? req.slice(1) : req;
     }
 
-    if( fs.existsSync( req ) ) {
+    if( fs.existsSync( base + req ) ) {
 
         status = 200;
         content_type = ct( req );
-        content = fs.readFileSync( req );
+        content = fs.readFileSync( base + req );
 
     } else {
 
