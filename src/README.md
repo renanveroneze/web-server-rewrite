@@ -1,13 +1,26 @@
-# Web Server Rewrite\n\n
-### Install\n
-```npm install -g web-server-rewrite```\n\n
-### Usage example:\n
-In first step, create a file called `rewrite.json` where is folder root.\n\n
+# Web Server Rewrite
+
+### Install
+```bash
+    npm install -g web-server-rewrite
+```
+
+### Usage example:
+In first step, create a file called `rewrite.json` where is folder root.
 
 **rewrite.json**
+```js
+    {
+        "pages": {
+            "\": "index.html",
+            "products/(.*)": "index.html"
+        }
+    }
+```
 
-```{\n    "pages": {\n        "/": "index.html"\n    }\n}```
+After create the `json` file, start server with command in root folder:
 
+```bash
+web-server [port](optional)
+```
 
-After create the `json` file, start server with command:\n
-```web-server [port](optional)```\n\n

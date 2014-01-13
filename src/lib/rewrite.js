@@ -25,11 +25,10 @@ module.exports = function( url, base ) {
 
         if( key != '/') {
 
-            console.log(regexp.test( url ) + ' <=> ' + url);
+            var regexp = new RegExp( key )
             if( regexp.test( url ) ) {
                 page = json.pages[key];
             }
-
 
         }
 
