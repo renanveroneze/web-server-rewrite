@@ -9,7 +9,7 @@
 In first step, create a file called `rewrite.json` where is folder root.
 
 **rewrite.json**
-```js
+```
     {
         "pages": {
             "\": "index.html",
