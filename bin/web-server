@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+    var path = require('path'),
+        lib = path.join( path.dirname( __filename ), '../lib' ) + '/',
+        argv = require( lib + 'argv.js' ),
+        server = require( lib + 'server.js' ),
+        options = argv.flags( process.argv.slice(2) );
+
+    server( options.port, options.base );

@@ -1,0 +1,15 @@
+{
+    "author": "Renan Veroneze",
+    "name": "web-server-rewrite",
+    "description": "Small HTTP server",
+    "version": "0.2.8",
+    "main": "./lib/server.js",
+    "bin": {
+        "web-server": "./bin/web-server"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/renanveroneze/web-server-rewrite"
+    },
+    "readme": "# Web Server Rewrite\n\n ### Install\n ```bash\nnpm install -g web-server-rewrite```\n\n ### Usage example:\n In first step, create a file called `rewrite.json` where is folder root.\n**rewrite.json**\n```js\n\n{\n    \"pages\": {\n        \"/\": \"index.html\"\n    }\n}```\n\n After create the `json` file, start server with command:\n ```web-server [port](optional)```\n\n"
+}
