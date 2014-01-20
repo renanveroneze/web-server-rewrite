@@ -12,8 +12,8 @@ In first step, create a file called `rewrite.json` where is folder root.
 ```
     {
         "pages": {
-            "\": "index.html",
-            "products/(.*)": "index.html"
+            "/": "index.html",
+            "/product/(.*)": "products.html"
         }
     }
 ```
@@ -21,6 +21,22 @@ In first step, create a file called `rewrite.json` where is folder root.
 After create the `json` file, start server with command in root folder:
 
 ```bash
-web-server [port](optional)
+
+Usage: web-server [options]
+
+Options:
+
+  -p, --port     change port to server listen
+  -b, --base     root folder for web access
+
+Examples:
+
+  $ web-server --port=3000
+  $ web-server -p=3000
+  
+  $ web-server --base=public_html/
+  $ web-server -b=public_html/
+
+
 ```
 
