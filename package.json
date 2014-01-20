@@ -2,7 +2,7 @@
     "author": "Renan Veroneze",
     "name": "web-server-rewrite",
     "description": "Small HTTP server",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "main": "./lib/server.js",
     "bin": {
         "web-server": "./bin/web-server"
@@ -11,5 +11,5 @@
         "type": "git",
         "url": "https://github.com/renanveroneze/web-server-rewrite"
     },
-    "readme": "# Web Server Rewrite\n\n ### Install\n ```bash\nnpm install -g web-server-rewrite```\n\n ### Usage example:\n In first step, create a file called `rewrite.json` where is folder root.\n**rewrite.json**\n```js\n\n{\n    \"pages\": {\n        \"/\": \"index.html\"\n    }\n}```\n\n After create the `json` file, start server with command:\n ```web-server [port](optional)```\n\n"
+    "readme": "# Web Server Rewrite\n\n### Install\n```bash\n    npm install -g web-server-rewrite```\n\n### Usage example:\nIn first step, create a file called `rewrite.json` where is folder root.\n\n**rewrite.json**\n```js\n    {\n        \"pages\": {\n            \"/\": \"index.html\",\n\n            \"/product/(.*)\": \"products.html\"\n        }\n    }\n```\n\nAfter create the `json` file, start server with command in root folder:\n\n```bash\n\nUsage: web-server [options]\n\nOptions:\n\n  -p, --port     change port to server listen\n  -b, --base     root folder for web access\n\nExamples:\n\n  $ web-server --port=3000\n  $ web-server -p=3000  \n\n  $ web-server --base=public_html/\n\n  $ web-server -b=public_html/\n\n```"
 }
