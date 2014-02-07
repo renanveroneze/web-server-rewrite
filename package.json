@@ -2,7 +2,7 @@
   "author": "Renan Veroneze",
   "name": "web-server-rewrite",
   "description": "Small HTTP server",
-  "version": "0.3.5",
+  "version": "0.3.7",
   "main": "./lib/server.js",
   "bin": {
     "web-server": "./bin/web-server"
