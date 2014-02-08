@@ -1,25 +1,38 @@
+# Web Server ReWrite
 
-# Web Server Rewrite
+A beautiful http server with php process and rewrite options (.htaccess)
 
-### Install
+
+## Install
+
 ```bash
-    npm install -g web-server-rewrite
+sudo npm install -g web-server-rewrite
 ```
 
-### Usage example:
-In first step, create a file called `rewrite.json` where is folder root.
 
-**rewrite.json**
+## How to start
+
+To activate options rewriting, you must create a file called `rewrite.json` in your root project folder
+
+The structure of `rewrite.json` is:
 ```js
-    {
-        "pages": {
-            "/": "index.html",
-            "/product/(.*)": "products.html"
-        }
+{
+    "pages": {
+        "/": "index.html",
+        "/produtos": "produtos.html",
+        "/produtos/:name/:id": "products.php?name=$1&id=$2",
+        "/usuario/([a-z0-9.-_]+)": "user.php?user=$1"
     }
+}
 ```
 
-After create the `json` file, start server with command in root folder:
+RegExp to RestFull style shortcuts:  
+```
+:name, :page, :action, :module => ([\w]+)  
+:id => ([\d]+)
+```
+
+
 
 ```bash
 
@@ -33,11 +46,11 @@ Options:
 Examples:
 
   $ web-server --port=3000
-  $ web-server -p=3000
-  
-  $ web-server --base=public_html/
   $ web-server -b=public_html/
 
-
 ```
+
+
+
+
 
